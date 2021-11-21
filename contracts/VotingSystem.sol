@@ -18,7 +18,14 @@ contract VotingSystem {
     }
 
     modifier onlyForEnrolledCandidates(string memory candidateName) {
-        require(1 == 1); // TODO: Implement
+        // TODO: Find out if this can be more efficient
+        bool candidateExists = false;
+        for (uint256 i = 0; i < candidates.length; i++) {
+            candidateExists =
+                keccak256(abi.encodePacked(candidates[i])) ==
+                keccak256(abi.encodePacked(candidateName));
+        }
+        require(candidateExists, "The Candidate is not enrolled");
         _;
     }
 

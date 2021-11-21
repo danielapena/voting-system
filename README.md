@@ -12,7 +12,7 @@
 
 - [done] View who is the winner of the voting
 
-Considerations: A hash consumes less space than an address or any other data type.
+Considerations: A hash consumes less space than an address or any other data type. Use the name as the candidate identifier, but only for simplicity of the example.
 
 ## Sample Data
 
